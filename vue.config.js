@@ -2,13 +2,13 @@
 const path = require('path')
 const defaultSettings = require('./src/settings.js')
 
-const px2rem = require('postcss-px2rem')
+// const px2rem = require('postcss-px2rem')
 
 function resolve(dir) {
   return path.join(__dirname, dir)
 }
 
-const name = defaultSettings.title || 'vue Admin Template' // page title
+const name = defaultSettings.title || '' // page title
 
 const port = process.env.port || process.env.npm_config_port || 9528 // dev port
 
@@ -21,11 +21,11 @@ module.exports = {
   productionSourceMap: false,
   css: {
     loaderOptions: {
-      postcss: {
-        plugins: [
-          px2rem({ remUnit: 19.2 }) // 1rem等于多少px
-        ]
-      }
+      // postcss: {
+      //   plugins: [
+      //     px2rem({ remUnit: 19.2 }) // 1rem等于多少px
+      //   ]
+      // }
     }
   },
 
